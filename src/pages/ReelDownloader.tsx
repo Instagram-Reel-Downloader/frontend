@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { downloadReel } from '../services/reelService';
+import { getReelDownloadLink } from '../services/reelService';
 
 const ReelDownloader: React.FC = () => {
     const [reelUrl, setReelUrl] = useState('');
@@ -12,7 +12,7 @@ const ReelDownloader: React.FC = () => {
 
     const handleDownload = async () => {
         try {
-            const link = await downloadReel(reelUrl);
+            const link = await getReelDownloadLink(reelUrl);
             setDownloadUrl(link);
             setError('');
         } catch (err: any) {

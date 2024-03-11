@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://localhost:3001/api/'
+export const FUNCTIONS_BASE_URL = 'https://master--reels-api.netlify.app/.netlify/functions/'
